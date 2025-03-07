@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "custom/interactive-poll",
+	"title": "Interactive Poll",
+	"category": "widgets",
+	"attributes": {
+		"question": {
+			"type": "string",
+			"default": ""
+		},
+		"options": {
+			"type": "array",
+			"default": []
+		},
+		"pollId": {
+			"type": "string",
+			"default": ""
+		},
+		"expiration": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "interactive-poll",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-view.css"
+}

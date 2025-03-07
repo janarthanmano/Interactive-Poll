@@ -1,0 +1,135 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-custom-interactive-poll {
+	max-width: 100%;
+	margin: 2rem auto;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+	.interactive-poll .poll-options {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(6, 1fr);
+		margin: 20px 0;
+		align-items: center;
+	}
+
+	.interactive-poll .poll-options .preview-option {
+		font-size: 14px;
+		text-align: center;
+	}
+
+	.interactive-poll .poll-options img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		border: 2px solid transparent;
+		transition: all 0.2s ease;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.interactive-poll .poll-options {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.interactive-poll .poll-options, .interactive-poll .poll-results {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 480px) {
+		.interactive-poll .poll-options, .interactive-poll .poll-results {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+// Inspector controls styling
+.components-panel__body {
+	.option-control {
+		position: relative;
+		padding: 15px;
+		margin-bottom: 15px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+
+		.media-button {
+			margin: 10px 0;
+		}
+
+		.remove-button {
+			margin-top: 10px;
+		}
+
+		img {
+			display: block;
+			margin: 10px 0;
+		}
+	}
+
+	.add-option-button {
+		width: 100%;
+		margin-top: 15px;
+	}
+}
+
+.poll-expiration {
+	margin: 15px 0;
+	padding: 10px;
+	background: #fff8e5;
+	border-left: 4px solid #ffb900;
+	font-size: 0.9em;
+}
+
+.poll-expired .poll-options button {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.poll-expired .poll-options button:hover {
+	transform: none;
+	border-color: transparent;
+}
+
+// Validation styles
+.has-error {
+	border-color: #cc1818 !important;
+
+	.components-text-control__input,
+	.components-button {
+		border-color: inherit;
+	}
+}
+
+.error-message {
+	color: #cc1818;
+	font-size: 10px;
+	margin: 10px 0 20px 0;
+}
+
+// Required asterisk
+.components-panel__body-controls .components-base-control__label {
+	&::after {
+		content: " *";
+		color: #cc1818;
+	}
+}
+
+.media-upload-wrapper {
+	position: relative;
+	margin: 8px 0;
+}
+
+
+//fix for the datapicker alignment issue
+.block-editor-block-inspector .components-base-control:where(:not(:last-child)), .block-editor-block-inspector .components-radio-control:where(:not(:last-child)){
+	margin-bottom: 0 !important
+}
