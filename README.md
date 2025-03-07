@@ -38,9 +38,9 @@ A Gutenberg block plugin for creating interactive polls with images and expirati
 |---------------------------------------------|
 | ![Editor](screenshots/admin_dashboard.png)  |
 
-| Frontend Voting | Results Display                            |
-|-----------------|--------------------------------------------|
-| ![Voting](screenshots/frontend.png) | ![Results](screenshots/fontend_result.png) |
+| Frontend Voting | Results Display                             |
+|-----------------|---------------------------------------------|
+| ![Voting](screenshots/frontend.png) | ![Results](screenshots/frontend_result.png) |
 
 ## Configuration
 
