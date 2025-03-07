@@ -1,0 +1,119 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/interactive-poll/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/* Frontend Styles */
+.wp-block-custom-interactive-poll {
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Responsive Design */
+}
+.wp-block-custom-interactive-poll .total-votes {
+  font-size: 12px;
+  text-align: center;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-options, .wp-block-custom-interactive-poll .interactive-poll .poll-results {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 20px 0;
+  align-items: center;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-options button, .wp-block-custom-interactive-poll .interactive-poll .poll-results .result-item {
+  padding: 0;
+  border: none;
+  background: none;
+  transition: transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-options button {
+  cursor: pointer;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-results .result-item .result-label {
+  font-size: 14px;
+  text-align: center;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-results .result-item .result-bar .result-progress {
+  display: inline-block;
+  background: #00a0d2;
+  height: 20px;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-results .result-item .result-bar .result-percentage {
+  font-size: 10px;
+  display: block;
+  text-align: center;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-options button img, .wp-block-custom-interactive-poll .interactive-poll .poll-results .result-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-options button:hover img {
+  transform: scale(1.05);
+  border-color: #007cba;
+}
+.wp-block-custom-interactive-poll .interactive-poll .poll-options button:active img {
+  transform: scale(0.95);
+}
+.wp-block-custom-interactive-poll .poll-expiration {
+  margin: 15px 0;
+  padding: 10px;
+  background: #fff8e5;
+  border-right: 4px solid #ffb900;
+  font-size: 0.9em;
+}
+.wp-block-custom-interactive-poll .poll-expired .poll-options button {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.wp-block-custom-interactive-poll .poll-expired .poll-options button:hover {
+  transform: none;
+  border-color: transparent;
+}
+@media (max-width: 1024px) {
+  .wp-block-custom-interactive-poll .interactive-poll .poll-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .wp-block-custom-interactive-poll .interactive-poll .poll-options, .wp-block-custom-interactive-poll .interactive-poll .poll-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .wp-block-custom-interactive-poll .interactive-poll .poll-options, .wp-block-custom-interactive-poll .interactive-poll .poll-results {
+    grid-template-columns: 1fr;
+  }
+}
+.wp-block-custom-interactive-poll .poll-loading {
+  text-align: center;
+  padding: 20px;
+}
+.wp-block-custom-interactive-poll .spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #007cba;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
